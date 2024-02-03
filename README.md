@@ -1,0 +1,2 @@
+# sdePractise
+Genral interview problems
