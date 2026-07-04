@@ -1,3 +1,43 @@
+
+// Example:
+function mergeArrayss(original, newArray) {
+  return [...original, ...newArray].reduce((acc, item) => {
+    if (!acc.includes(item)) {
+      acc.push(item);
+    }
+    return acc;
+  }, []);
+}
+
+// Example:
+const arr11 = [1, 2, 3, 4];
+const arr12 = [3, 4, 5, 6];
+console.log(mergeArrayss(arr11, arr12)); 
+// Output: [1, 2, 3, 4, 5, 6]
+
+
+function removedDuplicate(arr1,arr2){
+    let arr = [...arr1,...arr2];
+    const result = arr.reduce((item,data) => {
+        if(!item.includes(data)){
+            item.push(data)
+        }
+        return item
+    },[])
+    return result;
+}
+function mergeArrays(arr1,arr2){
+    for (let i =0; i < arr2.length; i++){
+        if(!arr1.includes(arr2[i])){
+            arr1.push(arr2[i])
+        }
+    }
+    return arr1;
+}
+const arr1 = [1, 2, 3, 4];
+const arr2 = [3, 4, 5, 6];
+console.log(mergeArrays(arr1, arr2)); 
+console.log(removedDuplicate(arr1, arr2)); 
 /*
         Given an integer array nums, return true if any value appears at
         least twice in the array, and return false if every element is
@@ -54,6 +94,16 @@ function duplicateUnieqValues(nums) {
     };
 }
 
+/*
+function duplicateUnieqValues(arr){
+    return arr.reduce((nums,num)=>{
+        if(!nums.includes(num)){
+            nums.push(num)
+        }
+        return nums
+    },[])
+}
+*/
 // Example usage:
 const testData = [1, 2, 3, 1,7,8,5,4,4,4,3,3,3,4,1,6];
 const res = duplicateUnieqValues(testData);
