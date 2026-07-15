@@ -39,3 +39,13 @@ index → the position of the current element (optional).
 array → the original array (optional).
 initialValue → the starting value for the accumulator.
 */
+
+// Q.  How would you get a new array from an original array with all elements doubled?
+// inpArr =  [1, 2, 3, 4, 5], Output: [2, 4, 6, 8, 10]
+let inpArr =  [1, 2, 3, 4, 5];
+let resultArr = inpArr.map((n) => n*2);
+let resultArrB = [];
+for(let i = 0; i< inpArr.length; i++){
+    resultArrB.push(inpArr[i]*2)
+}
+
