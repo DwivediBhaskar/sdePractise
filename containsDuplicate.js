@@ -1,4 +1,13 @@
 
+//  Find duplicate elements in an array
+function findDupliCate(arr){
+    for (let i = 0; i < arr.length; i++){
+        if(i !== arr.lastIndexOf(arr[i])){
+            return {"dupliCateFound": arr[i]};
+        }
+    }
+    return true;
+}
 // Example:
 function mergeArrayss(original, newArray) {
   return [...original, ...newArray].reduce((acc, item) => {
